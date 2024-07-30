@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perkembangan Konsep Objek dan Kelas</title>
+    <style>
+        body {
+            background-color: #f4f4f9;
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #001a3c;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            margin: 20px 10px;
+        }
+
+        .content {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 200px;
+            height: 200px;
+            flex-shrink: 0;
+        }
+
+        .image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffffff; 
+            margin-bottom: 10px;
+        }
+
+        .text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ffffff; 
+            text-align: justify;
+        }
+
+        h3.text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff; 
+            margin-top: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ffffff;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #002a5c;
+            color: #ffffff;
+        }
+
+        td {
+            background-color: #003a6c;
+            color: #ffffff;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .text-container {
+                align-items: center;
+            }
+
+            .image-container {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .title {
+                font-size: 20px;
+            }
+
+            .text {
+                font-size: 14px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: #001a3c; text-align: center;">Pemrograman Berorientasi Objek</h1>
+    <div class="container">
+        <div class="content">
+            <div class="image-container">
+                <img src="/Users/macbookfajri/Documents/Tech Company/1.png" alt="Image 1" class="image">
+            </div>
+            <div class="text-container">
+                <h1 class="title">Perkembangan Awal Konsep Objek dan Kelas</h1>
+                <p class="text">Konsep objek dan kelas pertama kali muncul pada akhir 1960-an dan awal 1970-an. Istilah "kelas" dan "objek" sendiri berasal dari penelitian pada bahasa pemrograman Simula, yang dikembangkan oleh Ole-Johan Dahl dan Kristen Nygaard di Norwegia. Simula awalnya dirancang untuk membuat simulasi komputer, dan di dalamnya, konsep objek digunakan untuk merepresentasikan entitas dalam dunia nyata. Kelas adalah template yang mendefinisikan karakteristik dan perilaku objek, sementara objek adalah instansiasi dari kelas tersebut. Inovasi ini memungkinkan pemrogram untuk menciptakan sistem yang lebih modular dan terorganisir.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="image-container">
+                <img src="/Users/macbookfajri/Documents/Tech Company/2.png" class="image">
+            </div>
+            <div class="text-container">
+                <h1 class="title">Bahasa Pemrograman Pertama yang Mendukung PBO</h1>
+                <p class="text">Simula, khususnya Simula 67, diakui sebagai bahasa pemrograman pertama yang mendukung konsep PBO. Dengan pengenalan konsep kelas dan objek, Simula 67 memungkinkan pemrograman yang lebih intuitif dalam menggambarkan elemen dunia nyata dan interaksi mereka. Meskipun penggunaannya terbatas pada komunitas ilmiah dan simulasi, Simula 67 menetapkan dasar bagi perkembangan bahasa pemrograman PBO di masa depan.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="image-container">
+                <img src="/Users/macbookfajri/Documents/Tech Company/3.png" class="image">
+            </div>
+            <div class="text-container">
+                <h1 class="title">Peran Bahasa Pemrograman dalam Mempopulerkan PBO</h1>
+                <h3 class="text">Smalltalk</h3>
+                <p class="text">Smalltalk, dikembangkan pada 1970-an oleh Alan Kay dan tim di Xerox PARC, adalah bahasa pemrograman pertama yang sepenuhnya mendukung PBO. Smalltalk memperkenalkan konsep penting seperti inheritance (pewarisan), encapsulation (enkapsulasi), dan polymorphism (polimorfisme). Smalltalk juga memperkenalkan lingkungan pengembangan yang interaktif, di mana objek dapat langsung dimanipulasi dan diuji. Meskipun tidak pernah menjadi mainstream, Smalltalk sangat berpengaruh dalam konsep dan filosofi PBO.</p>
+                <h3 class="text">C++</h3>
+                <p class="text">C++ dikembangkan oleh Bjarne Stroustrup pada awal 1980-an sebagai perpanjangan dari bahasa C. Dengan menambahkan fitur PBO ke dalam bahasa yang sudah populer, C++ membantu membawa konsep PBO ke komunitas pemrograman yang lebih luas. Fitur seperti kelas, pewarisan, dan polimorfisme memungkinkan pengembangan perangkat lunak yang lebih modular dan dapat digunakan kembali. C++ menjadi bahasa yang sangat populer di industri, terutama untuk pengembangan perangkat lunak sistem, game, dan aplikasi performa tinggi.</p>    
+                <h3 class="text">Java</h3>
+                <p class="text">Java, diperkenalkan oleh Sun Microsystems pada 1995, memainkan peran kunci dalam mempopulerkan PBO di kalangan pengembang perangkat lunak arus utama. Dirancang dengan prinsip "Write Once, Run Anywhere" (tulis sekali, jalankan di mana saja), Java memungkinkan aplikasi berjalan di berbagai platform tanpa perlu modifikasi. Java juga membawa fitur-fitur PBO seperti kelas, objek, pewarisan, dan polimorfisme ke dalam dunia pengembangan web dan aplikasi enterprise. Kemudahan penggunaan dan dukungan platform yang luas menjadikan Java salah satu bahasa pemrograman yang paling banyak digunakan di dunia.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h1 class="title">Perbandingan Pemograman Prosedural dan Berorientasi Objek</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Aspek</th>
+                    <th>Pemogramam Prosedural</th>
+                    <th>Pemogramam Berorientasi Objek</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Struktur Program</td>
+                    <td>Berbasis fungsi dan Prosedur</td>
+                    <td>Berbasis kelas dan objek</td>
+                </tr>
+                <tr>
+                    <td>Pendekatan</td>
+                    <td>Top-down, fokus pada prosedur dan alur logika</td>
+                    <td>Bottom-up, fokus pada objek yang berinteraksi </td>
+                </tr>
+                <tr>
+                    <td>Kelebihan</td>
+                    <td>Lebih sederhana dan mudah dipahami untuk program kecil | Memudahkan manajemen kode kompleks dan besar</td>
+                    <td>Memudahkan manajemen kode kompleks dan besar</td>
+                <tr>
+                    <td>Modularitas</td>
+                    <td>Modul Berbasis Fungsi</td>
+                    <td>Modul Berbasis Objek</td>
+                </tr>
+                    <td>Contoh bahasa</td>
+                    <td>C, PAscal, Fortran</td>
+                    <td>Java, C++, Python</td>
+                </tr>
+                <tr>
+                    <td>Keamanan Data</td>
+                    <td>Kurang aman, data dapat diakses langsung</td>
+                    <td>Lebih aman, data disembunyikan melalui enkapsulasi</td>
+                </tr>
