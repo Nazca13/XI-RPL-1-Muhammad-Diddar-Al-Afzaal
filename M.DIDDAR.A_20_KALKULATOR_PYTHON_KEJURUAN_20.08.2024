@@ -1,0 +1,77 @@
+# Definisikan kelas Kalkulator untuk melakukan operasi matematika 
+class Kalkulator:
+
+    def __init__(self, angka1, angka2):
+        # Inisialisasi dua angka untuk operasi matematika
+        self.angka1 = angka1
+        self.angka2 = angka2
+
+    # Metode untuk menambahkan dua angka
+    def tambah(self):
+        return self.angka1 + self.angka2
+
+    # Metode untuk mengurangi angka kedua dari angka pertama
+    def kurang(self):
+        return self.angka1 - self.angka2
+
+    # Metode untuk mengkalikan dua angka
+    def kali(self):
+        return self.angka1 * self.angka2
+
+    # Metode untuk membagi angka pertama dengan angka kedua
+    def bagi(self):
+        # Memeriksa apakah angka kedua adalah nol untuk menghindari pembagian dengan angkaa nol
+        if self.angka2 == 0:
+            return "Error: Tidak bisa membagi dengan nol."
+        return self.angka1 / self.angka2
+
+# Fungsi untuk menjalankan kalkulator dengan interaksi user
+def jalankan_kalkulator():
+    print(
+        "Selamat datang di Kalkulator Sederhana")  # Menampilkan pesan sambutan
+    while True:  # Memulai loop utama yang akan terus berjalan hingga user berhenti
+        try:
+            # Meminta user untuk memasukkan angka pertama dan mengubahnya menjadi float
+            
+            angka1 = float(input("Masukkan angka pertama: "))
+            # Meminta user untuk memilih operasi matematika
+            operasi = input("Pilih operasi (+, -, *, /): ")
+            # Meminta pengguna untuk memasukkan angka kedua dan mengubahnya menjadi float
+            angka2 = float(input("Masukkan angka kedua: "))
+
+            # Membuat Kalkulator dengan angka yang dimasukkan oleh si user 
+            kalkulator = Kalkulator(angka1, angka2)
+
+            # Memeriksa operasi yang dipilih dan menjalankan code
+            if operasi == "+":
+                hasil = kalkulator.tambah()  # Penjumlahan
+                
+            elif operasi == "-":
+                hasil = kalkulator.kurang()  # Pengurangan
+                 
+            elif operasi == "*":
+                hasil = kalkulator.kali()  # Perkalian
+                
+            elif operasi == ":":  # Pembagian
+                hasil = kalkulator.bagi()  # Pembagian
+            else:
+                print("Operasi tidak valid."
+                      )  # Jika operasi tidak valid, tampilkan pesan
+                continue  # Lanjutkan k
+                
+            print(f"Hasil: {hasil}")  # Tampilkan hasil operasi perhitungan
+        except ValueError:
+            print("Input tidak valid, harap masukkan angka yang benar."
+                  )  # Jika user memasukan input yang tidak valid dan menampilkan pesan
+
+        # Menanyakan apakaha user ingin melakukan operasi perhitungan lain
+        lagi = input("Apakah Anda ingin menghitung lagi? (y/n): ")
+        if lagi.lower() != 'y':
+            break  # Keluar dari loop jika pengguna tidak ingin menghitung lagi dan memasukan input n yang berarti tidak melakukan operasi lagi 
+
+    print("Terima kasih telah menggunakan Kalkulator."
+          )  # Menampilkan output perpisahan
+
+
+# Memanggil si fungsi untuk menjalankan kalkulator
+jalankan_kalkulator()
